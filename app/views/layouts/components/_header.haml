@@ -1,0 +1,22 @@
+%header
+  .container
+    .raw
+      .col-md-4.col-md-push-4.col-sm-4.col-sm-push-4
+        .logo_wrap
+          .logo
+            %a{:href => "#home_page"}
+              %img{:src => '/images/header/logo.png'}
+
+      .col-md-4.col-md-pull-4.col-sm-4.col-sm-pull-4
+        .address
+          %strong.sity_name Москва,
+          %br
+          %a.street{:href => "#map"} 1-я Фрезерная д.2 к.1
+
+      .col-md-4
+        .phone
+          %span.operator_code
+          %span.telephone Тел. 968-21-25
+          %br
+          %a.call_btn{:href => "tel:+79039682125"} Позвонить
+

@@ -1,0 +1,103 @@
+header {
+  min-height: 97px;
+  box-shadow: rgba(255, 255, 255, .15) 0 0 0 1px;
+  background-color: rgba(255,255,255,.8);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all, 1s;
+  -moz-transition: all, 1s;
+  -ms-transition: all, 1s;
+  -o-transition: all, 1s;
+  transition: all, 1s;
+
+}
+
+header a  {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  border-bottom: rgba(255, 255, 255, 0.8) dashed 1px;
+  color: #0f0f0f;
+  text-decoration: none;
+  transition: all, .2s;
+}
+
+header a:hover ,
+header a:focus {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  border-bottom: rgba(255, 255, 255, 1) dashed 1px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: all, .2s;
+}
+header a:hover {
+  border-bottom: #fff dashed 1px;
+  font-family: "BebasRegular", sans-serif;
+  color: #101010;
+  text-decoration: none;
+  transition: all, .2s;
+}
+
+.address {
+
+  background-image: url("/images/header/metka.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  min-width: 100px;
+
+}
+
+.sity_name {
+    font-family: "BebasBold", sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #d12f22;
+    line-height: 1em;
+}
+
+
+
+.address a {
+  font-size: 1.8em;
+
+
+}
+
+.phone a.call_btn{
+
+  font-size: .75em;
+
+}
+
+
+
+
+header .logo {
+  //position: absolute;
+
+  //margin-top: -20px;
+  a {border-bottom: 0;}
+}
+
+
+.center {
+  text-align: center  ;
+
+}
+
+header .phone {
+  font-family: "BebasBold", sans-serif;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  color: #d12f22;
+  line-height: 1em;
+  //text-align: right;
+  margin-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+header .phone .operator_code{
+  color: white;
+}
+
