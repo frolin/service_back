@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+header, footer {
+
+}
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  background-color: #fff;
+}
+
+
+#content {
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+    /*padding: 0px 10%;*/
+    margin-top: 120px;
+}
+
+#map {
+
+    position: absolute;
+    /*margin-top: 120px;*/
+    /*margin-bottom: 120px;*/
+    height: 68%;
+    width: 100%;
+
+}
+
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+}
+

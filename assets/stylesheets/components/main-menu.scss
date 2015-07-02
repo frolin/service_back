@@ -1,0 +1,35 @@
+footer nav {
+  text-align: center;
+  height: 130px;
+  padding: 50px;
+}
+
+
+footer nav ul {
+  list-style-type: none;
+
+
+}
+
+footer nav ul li {
+  display: inline-block;
+  width: 170px;
+  border: 1px solid #1c1374;
+  background-color: rgb(11, 67, 116);
+
+}
+footer nav li:hover, footer nav li.active {
+  background-color: indianred;
+}
+footer nav a {
+  color: #ffffff;
+  font-size: 2em;
+  font-family: "BebasBold", sans-serif;
+  display: block;
+
+}
+
+footer nav a:hover {
+  color:#fff;
+}
+

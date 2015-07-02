@@ -1,8 +1,6 @@
 header {
-  min-height: 97px;
+  padding: 10px 0;
   box-shadow: rgba(255, 255, 255, .15) 0 0 0 1px;
-  background-color: rgba(255,255,255,.8);
-  position: relative;
   z-index: 1;
   -webkit-transition: all, 1s;
   -moz-transition: all, 1s;
@@ -13,9 +11,9 @@ header {
 }
 
 header a  {
-  font-family: "BebasRegular", sans-serif;
+
   text-transform: uppercase;
-  border-bottom: rgba(255, 255, 255, 0.8) dashed 1px;
+  border-bottom: #253646 dashed 1px;
   color: #0f0f0f;
   text-decoration: none;
   transition: all, .2s;
@@ -38,32 +36,39 @@ header a:hover {
   transition: all, .2s;
 }
 
-.address {
-
-  background-image: url("/images/header/metka.png");
-  background-position: top left;
-  background-repeat: no-repeat;
-  min-width: 100px;
+header .address {
+  font-family: "BebasBold", sans-serif;
+  text-align: center;
 
 }
 
-.sity_name {
-    font-family: "BebasBold", sans-serif;
-    font-size: 3em;
+header .address i.metka{
+  background-image: url("/images/header/header_sprite.png?embed");
+  background-position: 62%;
+  background-repeat: no-repeat;
+  width:30px;
+  height: 35px;
+  display: block;
+  margin: 0 auto;
+
+}
+
+header .address .sity_name {
+    font-size: 1.5em;
     text-transform: uppercase;
     color: #d12f22;
-    line-height: 1em;
+    line-height: .8em;
+    display: inherit;
+}
+
+header .address a  {
+  font-family: "BebasBold", sans-serif;
+  font-size: 1.2em;
 }
 
 
 
-.address a {
-  font-size: 1.8em;
-
-
-}
-
-.phone a.call_btn{
+header .phone a.call_btn{
 
   font-size: .75em;
 
@@ -73,31 +78,42 @@ header a:hover {
 
 
 header .logo {
-  //position: absolute;
-
-  //margin-top: -20px;
-  a {border-bottom: 0;}
+  text-align: center;
 }
 
+header .logo strong {
+  display: block;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  line-height: .8em;
+}
 
-.center {
-  text-align: center  ;
+header .logo a {border: none;}
+header .logo img {margin: 0 auto;}
+
+header .telephone i {
+  background-image: url("/images/header/header_sprite.png?embed");
+  background-position: 96%;
+  background-repeat: no-repeat;
+  width:30px;
+  height: 35px;
+  display: block;
+  margin: 0 auto;
 
 }
 
-header .phone {
+header .telephone {
+  text-align: center;
   font-family: "BebasBold", sans-serif;
-  font-size: 2.3em;
+  font-size: 1.5em;
   text-transform: uppercase;
   color: #d12f22;
   line-height: 1em;
-  //text-align: right;
-  margin-top: 10px;
   padding-bottom: 10px;
 
 }
 
-header .phone .operator_code{
+header .telephone .operator_code{
   color: white;
 }
 

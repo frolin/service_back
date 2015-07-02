@@ -1,11 +1,21 @@
+
 module BoilerplateStarter
   class App < Padrino::Application
+    use Rack::MobileDetect
+    use Rack::Deflater
     use ConnectionPoolManagement
+
     register Padrino::Mailer
     register Padrino::Helpers
     register Sinatra::AssetPack
+    register Padrino::Cache
+
+    enable :caching
+
+    enable  :reload
 
     enable :sessions
+
 
 
 ### Sinatra assets ###
@@ -16,6 +26,7 @@ module BoilerplateStarter
       serve '/js',     from: '../assets/javascripts'        # Default
       serve '/css',    from: '../assets/stylesheets'       # Default
       serve '/images', from: '../assets/images'    # Default
+      serve '/fonts', from: '../assets/fonts'    # Default
 
       # The second parameter defines where the compressed version will be served.
       # (Note: that parameter is optional, AssetPack will figure it out.)
@@ -28,23 +39,26 @@ module BoilerplateStarter
                   '/js/jquery-ujs.js',
                    '/js/main.js'
                 ]
-      js :modernizr, ['/js/vendor/modernizr-2.8.3.min.js']
+      # js :modernizr, ['/js/vendor/modernizr-2.8.3.min.js']
 
 
       css :app, '/css/application.css', [
                   '/css/bootstrap/bootstrap.css',
                   '/css/bootstrap/bootstrap-theme.css',
+                  '/css/struct.css',
                   '/css/components/*'
                   # '/css/app.scss'
               ]
 
-      css :admin, '/css/admin.css', ['/css/lib/bootstrap3-editable/css/bootstrap-editable.css']
+      # css :admin, '/css/admin.css', ['/css/lib/bootstrap3-editable/css/bootstrap-editable.css']
       # js :libs, ['/bower_components/bootstrap/dist/js/bootstrap.js']
+      expires 86400*30
+      # cache_dynamic_assets true
+      prebuild true
 
-      cache_dynamic_assets true
-
-      js_compression  :uglify    # :jsmin | :yui | :closure | :uglify
+      js_compression  :yui    # :jsmin | :yui | :closure | :uglify
       css_compression :sass   # :simple | :sass | :yui | :sqwish
+
     }
 
 

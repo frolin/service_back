@@ -78,6 +78,7 @@ GEM
     i18n (0.7.0)
     jsmin (1.0.1)
     json (1.8.3)
+    kgio (2.9.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -94,10 +95,13 @@ GEM
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.5.5)
+    rack-mobile-detect (0.4.0)
+      rack
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    raindrops (0.14.0)
     rake (10.4.2)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -138,6 +142,10 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicorn (4.9.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     url_mount (0.2.1)
       rack
     yui-compressor (0.9.6)
@@ -155,6 +163,7 @@ DEPENDENCIES
   padrino!
   pg
   puma
+  rack-mobile-detect
   rack-test
   rake
   rspec
@@ -162,4 +171,8 @@ DEPENDENCIES
   sinatra-assetpack
   sqlite3
   uglifier (= 2.1.1)
+  unicorn
   yui-compressor (= 0.9.6)
+
+BUNDLED WITH
+   1.10.3

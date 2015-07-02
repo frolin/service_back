@@ -34,17 +34,33 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
 
-.container{padding: 0;}
-.col-xs-6 {padding: 0;}
+//.container, .container-fluid {padding: 0;}
+//  header {height: 40px; padding: 5px;}
+//  header .address {
+//    text-align: right;
+//  }
+//  header .address i.metka {
+//    display: inline-block;
+//  }
+//  header .phone  {
+//    text-align: right;
+//  }
+//  header .phone i {
+//    display: inline-block;
+//  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-  .container{padding: 0 15px;}
-  .col-xs-6 {padding: 0 15px;}
+//  .container, .container-fluid {padding: 0;}
+
+
+//  body { font-size:1.2em;}
+
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+//  body { font-size:1.4em;}
 
 }
 

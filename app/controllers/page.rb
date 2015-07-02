@@ -1,5 +1,7 @@
-BoilerplateStarter::App.controllers :page do
-  
+BoilerplateStarter::App.controllers :page, :cache => true do
+  expires 86400*30
+
+
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
   #   render 'index'
@@ -18,18 +20,21 @@ BoilerplateStarter::App.controllers :page do
   # get '/example' do
   #   'Hello world!'
   # end
-  
-  get :home, :map => '/', :provides => [:html, :js] do
-    haml :'page/home'
+
+
+  get :contact, :provides => [:js, :html], :map => '/'do
+    cache_key :contact
+    haml :'page/contact'
+    render :'page/contact', layout: !request.xhr?
+
   end
 
-  get :service, :provides => [:html, :js] do
-    haml :'page/service'
-    render :'page/service', layout: !request.xhr?
+
+  get :service, :provides => [:js, :html] do
+    cache_key :service
+    erb :'page/service'
+    render  :'page/service', layout: !request.xhr?
   end
 
-  get :about do
-    haml :'page/about'
-  end
 
 end

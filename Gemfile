@@ -11,6 +11,7 @@ group :core do
   gem 'bcrypt'
   gem 'erubis', '~> 2.7.0'
   gem 'sqlite3'
+  gem 'rack-mobile-detect'
 end
 
 group :assets do
@@ -23,6 +24,7 @@ end
 group :production do
   gem 'pg'
   gem 'capistrano'
+  gem 'unicorn'
   gem 'uglifier', '2.1.1'
   gem 'yui-compressor', '0.9.6'
 end
